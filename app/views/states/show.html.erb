@@ -1,0 +1,15 @@
+<br />
+<%= link_to("<< Back to List", {:action => 'list'}, :class => 'back-link') %>
+
+<div class="state show">
+  <h2><br />Show State Detail<br /></h2>
+  <table summary="State detail view">
+    <tr> <th>&nbsp;Rec ID:</th><td><%= @state.id %></td> </tr>
+    <tr> <th>&nbsp;&nbsp;State:</th><td><%= @state.name %></td> </tr>
+    <tr> <th>Capital:</th><td><%= @state.capital %></td> </tr>
+    <tr> <th>&nbsp;&nbsp;Abbrv:</th><td><%= @state.abbreviation %></td> </tr>
+    <tr> <th>&nbsp;&nbsp;&nbsp;&nbsp;Year:</th><td><%= @state.year %></td> </tr>
+    <tr> <th>Created:</th><td><%= @state.created_at %></td> </tr>
+    <tr> <th>Updated:</th><td><%= @state.updated_at %></td> </tr>
+  </table>  
+</div>  

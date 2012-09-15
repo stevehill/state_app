@@ -1,0 +1,34 @@
+<div class="states list">
+  <h2><br />-------------<br />States List<br />-------------</h2>
+  <%= link_to("[ Add a new State ]", {:action => 'new'}, :class => 'action new') %>
+<br /><br />
+
+  <table class="listing" summary="State list">
+    <tr class="header">
+      <th>Rec ID - - - -</th>
+      <th>State - - - - - - - - - - - -</th>
+      <th>Capital - - - - - - - - - - - -</th>
+      <th>Abbrv - - - - -</th>
+      <th>Year - - - -</th>
+      <th>Actions - - - - - - </th>
+    </tr>  
+    <% @states.each do |st| %>  
+    <tr>
+      <td><%= st.id %></td>
+      <td><%= st.name %></td>
+      <td><%= st.capital %></td>
+      <td><%= st.abbreviation %></td>
+      <td><%= st.year %></td>
+      <td class="actions">
+      <%= link_to("Show", {:action => 'show', :id => st.id}, :class => 'action show') %>
+      <%= link_to("Edit", {:action => 'edit', :id => st.id}, :class => 'action edit') %>
+      <%= link_to("Delete", {:action => 'delete', :id => st.id}, :class => 'action delete') %>
+      </td>
+    </tr>  
+    <% end %>  
+  </table>  
+  
+<br />
+<%= link_to("[ Add a new State ]", {:action => 'new'}, :class => 'action new') %>
+  
+</div>  

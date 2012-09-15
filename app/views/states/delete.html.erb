@@ -1,0 +1,20 @@
+<br />
+<%= link_to("<< Back to List", {:action => 'list'}, :class => 'back-link') %>
+
+<div class="state delete">
+  <h2><br />Delete State<br /></h2>
+  <%= form_for(:state, :url => {:action => 'destroy', :id => @state.id}) do |f| %>
+  
+  <table summary="State form field">
+    <tr> <th>&nbsp;&nbsp;State:</th><td><%= f.text_field(:name) %></td> </tr>
+    <tr> <th>Capital:</th><td><%=  f.text_field(:capital) %></td> </tr>
+    <tr> <th>&nbsp;&nbsp;Abbrv:</th><td><%=  f.text_field(:abbreviation) %></td> </tr>
+    <tr> <th>&nbsp;&nbsp;&nbsp;&nbsp;Year:</th><td><%=  f.text_field(:year) %></td> </tr>
+  </table>
+  <p>Are you sure you want to delete this state? <br />(Please click "Delete State" or the "Back to List" link)</p>  
+  <div>
+    <%= submit_tag("Delete State") %>
+  </div>
+  
+  <% end %>  
+</div>  
