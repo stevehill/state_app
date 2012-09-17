@@ -28,3 +28,23 @@ doc/
 .project
 .DS_Store
 .idea
+
+## ======= I believe these came from the GitHub .gitignore file
+## when I did git pull origin master, the 2 .gitignore files were merged 
+
+*.rbc
+*.sassc
+.sass-cache
+capybara-*.html
+.rspec
+/.bundle
+/vendor/bundle
+/log/*
+/tmp/*
+####/db/*.sqlite3
+/public/system/*
+/coverage/
+/spec/tmp/*
+**.orig
+rerun.txt
+pickle-email-*.html
